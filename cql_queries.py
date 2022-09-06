@@ -41,30 +41,8 @@ history_song_create = """
 
 # Inserting data into tables 
 music_history_insert = "INSERT INTO music_history (sessionId,itemInSession, artist, song, length) VALUES (%s, %s, %s, %s, %s)"  
-
 user_songs_insert = "INSERT INTO user_songs (userId, sessionId, artist, song, firstName, lastName, itemInSession) VALUES (%s, %s, %s, %s, %s, %s, %s)"
-
 history_song_insert = "INSERT INTO history_song (song, firstName, lastName, userId) VALUES (%s, %s, %s, %s)"
-
-# SQL Queries
-first_query = \
-    """ SELECT artist, song, length 
-        FROM music_history 
-        WHERE sessionId = 338 
-        AND itemInSession = 4 
-    """ 
-
-second_query = \
-	"""SELECT itemInSession, artist, song, firstName, lastName 
-		FROM user_songs 
-		WHERE userId = 10 
-		AND sessionId = 182
-	"""
-third_query = \
-	"""SELECT firstName, lastName 
-		FROM history_song 
-		WHERE song = 'All Hands Against His Own
-	"""
 
 
 # Droping tables
